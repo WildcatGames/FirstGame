@@ -9,8 +9,8 @@ namespace _2048{
         //Properties
         public Color Col{ get; private set; }
         public int Value{ get; private set; }
-        public int XLocation{ get; private set; }
-        public int YLocation{ get; private set; }
+        public int XLocation{ get; set; }
+        public int YLocation{ get; set; }
 
         //Constructor(s)
         public Block(int val, int xLoc, int yLoc){
@@ -22,6 +22,37 @@ namespace _2048{
             } else {
                 this.Col = Color.Yellow;
             }
+        }
+
+        //Methods
+        public void changeColor(){
+            switch(this.Col.ToString){
+                case "Tan":
+                    this.Col = Color.Yellow;
+                case "Yellow":
+                    this.Col = Color.Gold;
+                case "Gold":
+                    this.Col = Color.Orange;
+                case "Orange":
+                    this.Col = Color.OrangeRed;
+                case "OrangeRed":
+                    this.Col = Color.Red;
+                case "Red":
+                    this.Col = Color.LightBlue;
+                case "LightBlue":
+                    this.Col = Color.SkyBlue;
+                case "SkyBlue":
+                    this.Col = Color.RoyalBlue;
+                case "RoyalBlue":
+                    this.Col = Color.Blue;
+                case "Blue":
+                    this.Col = Color.Gray;
+                default:
+            }
+        }
+
+        public void doubleValue(){
+            this.Value *= 2;
         }
     }
 }
