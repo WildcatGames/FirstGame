@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 
-namespace _2048{
+namespace FirstGame{
     class Block{
         //Static Variables
         readonly private static int EdgeSize = 100;
